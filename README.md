@@ -69,7 +69,7 @@ clarinet deploy
 
 ### 👨‍💻 Author
 
-**Tejas Jadhav**  
+**Tejas Bagal**  
 🔗 [GitHub](https://github.com/TheTJ47)  
 🎓 Empowering learners through tech and storytelling
 
