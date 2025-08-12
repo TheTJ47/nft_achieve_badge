@@ -58,6 +58,24 @@ clarinet deployments apply --testnet
 
 ---
 
+### 🌐 Live Deployment (Testnet)
+
+* **Contract Name:** `nft-achieve-badge`
+* **Contract ID:** [`ST338P76HZYBD44YJ40WBR3Y50ENME6MXTD4NG487.nft-achieve-badge`](https://explorer.hiro.so/txid/0x35cd9676c70a41fcc4da8849f6a97cb11ff704da1d227d232781786b955234ef?chain=testnet)
+* **Transaction ID:** `0x35cd9676c70a41fcc4da8849f6a97cb11ff704da1d227d232781786b955234ef`
+* **Deployed By:** `ST338P76HZYBD44YJ40WBR3Y50ENME6MXTD4NG487`
+* **Fees Paid:** 0.02508 STX
+* **Block Height:** `#3514076` (Bitcoin anchor block `#78983`)
+* **Clarity Version:** 3
+* **Contract Stats:**
+
+  * **4** functions
+  * **6** variables
+  * **2** maps
+  * **1** token
+
+---
+
 ### 🧪 Interacting with the Contract
 
 Once deployed, you can run these in the **Clarinet console**:
@@ -77,11 +95,7 @@ Once deployed, you can run these in the **Clarinet console**:
 (contract-call? .nft-achieve-badge burn-badge u1)
 ```
 
-You can also test via the [Stacks Explorer](https://explorer.stacks.co/?chain=testnet) by searching for your **contract ID**:
-
-```
-ST338P76HZYBD44YJ40WBR3Y50ENME6MXTD4NG487.nft-achieve-badge
-```
+Or use the [Stacks Explorer contract page](https://explorer.hiro.so/txid/0x35cd9676c70a41fcc4da8849f6a97cb11ff704da1d227d232781786b955234ef?chain=testnet) to call functions directly.
 
 ---
 
@@ -108,4 +122,3 @@ ST338P76HZYBD44YJ40WBR3Y50ENME6MXTD4NG487.nft-achieve-badge
 🔗 [GitHub](https://github.com/TheTJ47)
 🎓 Empowering learners through tech and storytelling
 
----
