@@ -1,4 +1,4 @@
-
+<img width="1920" height="871" alt="Screenshot 2025-08-12 145440" src="https://github.com/user-attachments/assets/3edc1720-a1ad-4f4a-9a6f-e8e4993524bc" />
 ## 🏅 NFT Achieve Badge
 
 A Clarity smart contract on the [Stacks](https://stacks.co/) blockchain for issuing achievement-based NFTs.
@@ -73,6 +73,7 @@ clarinet deployments apply --testnet
   * **6** variables
   * **2** maps
   * **1** token
+<img width="1920" height="871" alt="Screenshot 2025-08-12 145440" src="https://github.com/user-attachments/assets/efbdfe88-bc5f-481d-8a6f-38b31fadb167" />
 
 ---
 
