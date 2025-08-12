@@ -11,7 +11,7 @@ plan:
         - contract-publish:
             contract-name: nft-achieve-badge
             expected-sender: ST338P76HZYBD44YJ40WBR3Y50ENME6MXTD4NG487
-            cost: 2531
+            cost: 25080
             path: "contracts\\nft-achieve-badge.clar"
             anchor-block-only: true
             clarity-version: 3
