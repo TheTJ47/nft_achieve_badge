@@ -1,18 +1,18 @@
-Absolutely, Tejas! Here's a tailored `README.md` for your **NFT Achieve Badge** project, assuming it's a Clarity-based smart contract setup with testing and deployment tools. You can tweak the tone or add more technical depth depending on your audience (students, devs, recruiters, etc.).
-
----
 
 ## 🏅 NFT Achieve Badge
 
-A smart contract project built with [Clarity](https://docs.stacks.co/docs/clarity-language/overview/) to issue achievement-based NFTs on the Stacks blockchain. Designed to reward learners, builders, and contributors with verifiable digital badges.
+A Clarity smart contract on the [Stacks](https://stacks.co/) blockchain for issuing achievement-based NFTs.
+Designed to reward learners, builders, and contributors with verifiable, on-chain digital badges.
+
+---
 
 ### 📁 Project Structure
 
 ```
 ├── contracts/           # Clarity smart contracts
 ├── tests/               # Unit tests for contracts
-├── settings/            # Deployment configs
-├── .vscode/             # Editor settings
+├── deployments/         # Generated deployment plans
+├── settings/            # Network configs (Mainnet/Testnet)
 ├── Clarinet.toml        # Clarinet project config
 ├── package.json         # Node.js dependencies
 ├── tsconfig.json        # TypeScript config
@@ -26,53 +26,86 @@ A smart contract project built with [Clarity](https://docs.stacks.co/docs/clarit
 ### 🚀 Getting Started
 
 #### 1. Clone the repo
+
 ```bash
 git clone https://github.com/TheTJ47/nft_achieve_badge.git
 cd nft_achieve_badge
 ```
 
 #### 2. Install dependencies
+
 ```bash
 npm install
 ```
 
-#### 3. Run tests
-```bash
-npm test
-```
+#### 3. Check contract syntax
 
-#### 4. Deploy contract (via Clarinet)
 ```bash
 clarinet check
-clarinet deploy
+```
+
+#### 4. Deploy to Testnet
+
+```bash
+# Generate plan
+clarinet deployments generate --testnet --low-cost
+
+# Apply deployment plan to Testnet
+clarinet deployments apply --testnet
+```
+
+**Note:** Requires [Docker](https://docs.docker.com/get-docker/) to be running.
+
+---
+
+### 🧪 Interacting with the Contract
+
+Once deployed, you can run these in the **Clarinet console**:
+
+```clojure
+;; Award a badge (run as contract-owner)
+(contract-call? .nft-achieve-badge award-badge u1 'ST2CY5V39NHDPWSXMW9QDT3HC3GD6Q6XX4CFRK9AG "First Milestone" "Completed first goal")
+
+;; Check if recipient has completed
+(contract-call? .nft-achieve-badge has-completed 'ST2CY5V39NHDPWSXMW9QDT3HC3GD6Q6XX4CFRK9AG u1)
+
+;; Get badge metadata
+(contract-call? .nft-achieve-badge get-badge-info u1)
+
+;; Burn badge (switch sender first)
+::set_tx_sender ST2CY5V39NHDPWSXMW9QDT3HC3GD6Q6XX4CFRK9AG
+(contract-call? .nft-achieve-badge burn-badge u1)
+```
+
+You can also test via the [Stacks Explorer](https://explorer.stacks.co/?chain=testnet) by searching for your **contract ID**:
+
+```
+ST338P76HZYBD44YJ40WBR3Y50ENME6MXTD4NG487.nft-achieve-badge
 ```
 
 ---
 
 ### 🧠 Features
 
-- ✅ Mint NFTs based on achievements
-- 🔒 Permissioned minting logic
-- 📜 Transparent smart contract code
-- 🧪 Unit-tested with [Clarinet](https://www.hiro.so/clarinet) and [Vitest](https://vitest.dev/)
-- 🌐 Ready for integration with frontend or badge dashboard
+* ✅ Achievement-based NFT minting
+* 🔒 Permissioned mint logic
+* 📜 Transparent Clarity code
+* 🧪 Tested with [Clarinet](https://www.hiro.so/clarinet) + [Vitest](https://vitest.dev/)
 
 ---
 
-### 📚 Use Cases
+### 📚 Example Use Cases
 
-- **Education Platforms**: Reward students for completing modules
-- **Hackathons**: Issue badges for participation or winning
-- **Open Source Projects**: Recognize contributors with on-chain proof
+* **Education Platforms** – Reward students for course completions
+* **Hackathons** – Issue badges for participation or winning
+* **Open Source** – Recognize contributors with on-chain proof
 
 ---
 
 ### 👨‍💻 Author
 
-**Tejas Bagal**  
-🔗 [GitHub](https://github.com/TheTJ47)  
+**Tejas Bagal**
+🔗 [GitHub](https://github.com/TheTJ47)
 🎓 Empowering learners through tech and storytelling
 
 ---
-
-Want help designing a badge minting UI or writing docs for contributors? I’d love to collaborate.
